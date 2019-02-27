@@ -1,2 +1,10 @@
-<h1>Races#index</h1>
-<p>Find me in app/views/races/index.html.erb</p>
+<h1>Races</h1>
+<hr />
+<div>
+  <% @races.each do |race| %>
+    <div>
+    <%= link_to race.name, race_path(race), class: "text_link" %>
+    </div>
+  <% end %>
+</div>
+<hr />
