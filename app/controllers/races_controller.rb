@@ -1,5 +1,5 @@
 class RacesController < ApplicationController
-  before_action :get_race, only: [:new, :edit, :show, :destroy]
+  before_action :get_race, only: [:update, :edit, :show, :destroy]
 
   def index
     @races = Race.all
@@ -37,6 +37,7 @@ class RacesController < ApplicationController
   def destroy
     @race.destroy
     redirect_to races_path
+  end
 
   private
     def race_params
