@@ -1,5 +1,5 @@
-<h1><%= @race.name ? "Edit " : "New " %>Race</h1>
-<div class="form_input"><%= form_with(model: @race, local: true) do |f| %><?div>
+<h1><%= @game.name ? "Edit " : "New " %>Game</h1>
+<div class="form_input"><%= form_with(model: @game, local: true) do |f| %><?div>
 <div class="form_input_label"><%= f.label :name %></div>
 <div class="form_input"><%= f.text_field :name %></div>
 <div class="form_input"><%= f.submit %></div>
