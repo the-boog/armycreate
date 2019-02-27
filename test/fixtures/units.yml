@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  speed: MyString
+  melee: MyString
+  range: MyString
+  defense: MyString
+  attack: MyString
+  nerve: MyString
+  point: MyString
+  race: one
+
+two:
+  name: MyString
+  type: 
+  speed: MyString
+  melee: MyString
+  range: MyString
+  defense: MyString
+  attack: MyString
+  nerve: MyString
+  point: MyString
+  race: two
