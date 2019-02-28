@@ -1,2 +1,11 @@
-<h1>Races#show</h1>
-<p>Find me in app/views/races/show.html.erb</p>
+<h2><%= @race.name %> 
+
+<div>
+  <% @races.units.each do |unit| %>
+    <div>
+    <%= unit.name, (@race, unit), %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "| back", game_races_path %> </h2>
