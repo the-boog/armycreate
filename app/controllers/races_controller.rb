@@ -11,11 +11,11 @@ class RacesController < ApplicationController
   end
 
   def create
-    @race = Race.new(race_params)
+    @race = Race.create(race_params)
     if @race.save
       redirect_to races_path
     else
-    render :new
+    render "form"
     end
   end
 
@@ -27,7 +27,7 @@ class RacesController < ApplicationController
     if @race.update(race_params)
       redirect_to races_path
     else
-      render :edit
+      render "form"
     end
   end
 
