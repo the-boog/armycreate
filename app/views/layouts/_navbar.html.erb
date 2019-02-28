@@ -4,7 +4,16 @@
 <% @games.each do |game| %>
 <a><%= link_to game.name, game_races_path(game.id), class: "nav-item" %></a>
 <% end %>
-<a class="nav-item-empty"></a>
+
+<div class="nav-item-empty">
+<% if notice %>
+<p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+<p class="alert alert-danger"><%= alert %></p>
+<% end %>
+</div>
+
 
 <div class="nav-item" id="user-sign-in" >
   <% if user_signed_in? %>

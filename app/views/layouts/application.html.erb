@@ -10,33 +10,6 @@
   </head>
 
   <body>
-    <div id="full-page-container">
-      <div id="inner-page-container">
-
-        <div id="nav-bar-container">
-        <%= render '/layouts/navbar' %>
-        </div>
-
-        <div>
-        <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-        <% end %>
-        <%= yield %>
-        </div>
-
-        <div id="two-column-container">
-            <div id="main-column1">
-            <%= render '/layouts/all_units' %>
-            </div>
-            <div id="main-column2">
-            <%= render '/layouts/user_army_list' %>
-            </div>
-        </div>
-
-      </div>
-    </div>
+  <%= yield %>
   </body>
 </html>

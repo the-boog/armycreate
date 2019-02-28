@@ -1,10 +1,19 @@
-<h1>Games</h1>
-<hr />
-<div>
-  <% @games.each do |game| %>
-    <div>
-    <%= link_to game.name, game_path(game), class: "text_link" %>
-    </div>
-  <% end %>
+<div id="full-page-container">
+<div id="inner-page-container">
+
+  <div id="nav-bar-container">
+  <%= render '/layouts/navbar' %>
+  </div>
+
+  <div> . </div> 
+  <div id="two-column-container">
+      <div id="main-column1">
+      <%= render '/layouts/all_units' %>
+      </div>
+      <div id="main-column2">
+      <%= render '/layouts/user_army_list' %>
+      </div>
+  </div>
+
 </div>
-<hr />
+</div>
