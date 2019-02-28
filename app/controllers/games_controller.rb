@@ -18,7 +18,7 @@ class GamesController < ApplicationController
     if @game.save
       redirect_to games_path
     else
-      render :new
+      render "form"
     end
   end
 
@@ -31,7 +31,7 @@ class GamesController < ApplicationController
     if @game.update
       redirect_to games_path
     else
-      render :new
+      render "form"
     end
   end
 

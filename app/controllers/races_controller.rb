@@ -1,22 +1,19 @@
 class RacesController < ApplicationController
   before_action :get_race, only: [:update, :edit, :show, :destroy]
+  before_action :get_game
 
   def index
-    @races = Race.all
+    @races = @game.races
   end
 
   def new
-    @race = Race.new
+    @race = @game.races.new
     render "form"
   end
 
   def create
-    @race = Race.create(race_params)
-    if @race.save
-      redirect_to races_path
-    else
-    render "form"
-    end
+    @race = @game.races.new(race_params)
+    @race.save
   end
 
   def edit
@@ -25,7 +22,7 @@ class RacesController < ApplicationController
 
   def update
     if @race.update(race_params)
-      redirect_to races_path
+      redirect_to game_races_path
     else
       render "form"
     end
@@ -36,15 +33,20 @@ class RacesController < ApplicationController
 
   def destroy
     @race.destroy
-    redirect_to races_path
+    redirect_to game_races_path
   end
 
   private
     def race_params
-      params.require(:race).permit(:name)
+      params.require(:race).permit(:name, :game_id)
     end
 
-    def get_race
-      @race = Race.find(params[:id])
+     def get_race
+       @race = Race.find(params[:id])
+     end
+
+    def get_game
+      @game = Game.find(params[:game_id])
     end
+    
 end
