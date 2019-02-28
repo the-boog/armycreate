@@ -136,24 +136,30 @@ border: solid red 1px;
   width: 100%;
 }
 
+#user-sign-in{
+  display: flex;
+  flex-direction: column;
+}
+
 #two-column-container {
   border: solid green 3px;
   display: flex;
   flex-direction: row;
-  height: 100%;
-  justify-content: space-evenly;
+  height: 98%;
+  align-items: center;
+  justify-content: center;
 }
 
 #main-column1{
-  height: 100%;
-  width: 100%;
+  height: 99%;
+  width: 99%;
   border: solid gray 1px;
   padding: 5px;
 }
 
 #main-column2{
-  height: 100%;
-  width: 100%;
+  height: 99%;
+  width: 99%;
   border: solid red 1px;
   padding: 5px;
 }
