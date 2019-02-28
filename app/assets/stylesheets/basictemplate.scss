@@ -2,13 +2,14 @@
   font-family: Trebuchet MS;
   color: black;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  --main-nav-color: orange;
-  --secondary-nav-color: red;
+  --main-nav-color: darkgrey;
+  --secondary-nav-color: tan;
+  overflow: hidden;
 } 
 
 .text_link:hover {
@@ -18,6 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   border-bottom: solid var(--secondary-nav-color) 4px;
+  width: 100%;
 }
 
 .nav-item {
@@ -27,7 +29,7 @@ body {
   padding: 15px;
   font-size: 1.1em;
   border-right: solid white 1px;
-  width: 100px;
+  width: 15%;
   text-align: center;
 }
 
@@ -42,7 +44,7 @@ body {
   text-decoration: none;
   padding: 15px;
   font-size: 1.1em;
-  width: 100px;
+  width: 100%;
   text-align: center;
 }
 
@@ -114,3 +116,44 @@ select:focus {
 }
 
 
+#full-page-container{
+  height: 100vh; 
+  width: 100vw; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+#inner-page-container{
+  display: flex;
+  flex-direction: column;
+height: 98%;
+width: 98%;
+border: solid red 1px;
+}
+
+#nav-bar-container{
+  width: 100%;
+}
+
+#two-column-container {
+  border: solid green 3px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+#main-column1{
+  height: 100%;
+  width: 100%;
+  border: solid gray 1px;
+  padding: 5px;
+}
+
+#main-column2{
+  height: 100%;
+  width: 100%;
+  border: solid red 1px;
+  padding: 5px;
+}

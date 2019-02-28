@@ -10,8 +10,27 @@
   </head>
 
   <body>
-    <div>
-    <%= yield %>
+    <div id="full-page-container">
+      <div id="inner-page-container">
+      
+        <div id="nav-bar-container">
+        <%= render '/layouts/navbar' %>
+        </div>
+
+        <div>
+        <%= yield %>
+        </div>
+
+        <div id="two-column-container">
+            <div id="main-column1">
+            <%= render '/layouts/all_units' %>
+            </div>
+            <div id="main-column2">
+            <%= render '/layouts/user_army_list' %>
+            </div>
+        </div>
+
+      </div>
     </div>
   </body>
 </html>

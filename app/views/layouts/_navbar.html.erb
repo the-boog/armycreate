@@ -1,0 +1,9 @@
+<div>
+<div class="navbar">
+<% @games = Game.all %>
+<% @games.each do |game| %>
+<a><%= link_to game.name, game_races_path(game.id), class: "nav-item" %></a>
+<% end %>
+<a class="nav-item-empty"></a>
+</div>
+</div>

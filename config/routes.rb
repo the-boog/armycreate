@@ -5,9 +5,8 @@ Rails.application.routes.draw do
     resources :races
   end
   
-  resources :races do 
-    resources :units
-  end
-  
+  # resources :races do 
+  #   resources :units
+  # end
   
 end

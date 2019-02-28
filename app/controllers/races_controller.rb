@@ -13,7 +13,11 @@ class RacesController < ApplicationController
 
   def create
     @race = @game.races.new(race_params)
-    @race.save
+    if @race.save
+      redirect_to game_races_path(@game)
+    else
+      render "form"
+    end
   end
 
   def edit

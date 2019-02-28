@@ -1,10 +1,8 @@
 <h1>Races</h1>
-<hr />
 <div>
   <% @races.each do |race| %>
     <div>
-    <%= link_to race.name, race_path(race), class: "text_link" %>
+    <%= link_to race.name, game_race_path(@game, race), class: "text_link" %>
     </div>
   <% end %>
 </div>
-<hr />
