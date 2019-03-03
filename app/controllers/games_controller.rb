@@ -3,6 +3,7 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
+    @game1 = GamesHelper.help
   end
 
   def show
@@ -27,8 +28,7 @@ class GamesController < ApplicationController
   end
 
   def update
-    @game = Game.update(game_params)
-    if @game.update
+    if @game.update(game_params)
       redirect_to games_path
     else
       render "form"
@@ -39,6 +39,11 @@ class GamesController < ApplicationController
     @game.destroy
     redirect_to games_path
   end
+  
+    def choose_game
+      @game
+      render :index
+    end
  
   private
   def game_params
@@ -48,8 +53,6 @@ class GamesController < ApplicationController
   def set_game
     @game = Game.find(params[:id])
   end
-  
-
 
 end
 
