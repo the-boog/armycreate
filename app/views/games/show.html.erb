@@ -1,2 +1,17 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<div id="full-page-container">
+<div id="inner-page-container">
+
+  <div id="nav-bar-container">
+  <%= render '/layouts/navbar' %>
+  </div>
+  <div id="two-column-container" class="warhammer-map">
+      <div id="main-column1">
+      <%= render '/layouts/all_units' %>
+      </div>
+      <div id="main-column2">
+      <%= render '/layouts/user_army_list' %>
+      </div>
+  </div>
+
+</div>
+</div>

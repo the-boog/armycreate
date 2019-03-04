@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :races
   end
   
-  post 'games/choose_game', 'games#choose'
+  #post 'games/choose_game', 'games#choose'
   # resources :races do 
   #   resources :units
   # end

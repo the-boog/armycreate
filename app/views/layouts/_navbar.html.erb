@@ -2,7 +2,7 @@
 <div class="navbar" style="margin: 0; padding: 0;">
 <% @games = Game.all %>
 <% @games.each do |game| %>
-<a><%= link_to game.name, games_choose_game_path(game), method: :post, class: "nav-item" %></a>
+<a><%= link_to game.name, game_path(game), method: :get, class: "nav-item" %></a>
 <% end %>
 <a><%= link_to "+", new_game_path, class: 'nav-item' %></a>
 

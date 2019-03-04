@@ -1,6 +1,7 @@
 class RacesController < ApplicationController
   before_action :get_race, only: [:update, :edit, :show, :destroy]
   before_action :get_game
+  before_action :get_races
 
   def index
     @races = @game.races
@@ -51,6 +52,10 @@ class RacesController < ApplicationController
 
     def get_game
       @game = Game.find(params[:game_id])
+    end
+
+    def get_races
+      @races = @game.races
     end
     
 end

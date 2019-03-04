@@ -1,0 +1,9 @@
+<h1>Races</h1>
+<div class="warhammer-map">
+
+  <% RacesHelper.get_races(@game).each do |race| %>
+    <div>
+    <%= link_to race.name, game_race_path(@game, race), class: "text_link" %>
+    </div>
+  <% end %>
+</div>

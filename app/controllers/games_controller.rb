@@ -3,7 +3,6 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-    @game1 = GamesHelper.help
   end
 
   def show
@@ -39,11 +38,6 @@ class GamesController < ApplicationController
     @game.destroy
     redirect_to games_path
   end
-  
-    def choose_game
-      @game
-      render :index
-    end
  
   private
   def game_params

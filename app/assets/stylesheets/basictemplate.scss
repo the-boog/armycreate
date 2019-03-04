@@ -7,8 +7,8 @@
 }
 
 body {
-  --main-nav-color: darkgrey;
-  --secondary-nav-color: tan;
+  --main-nav-color: rgb(156, 129, 104);
+  --secondary-nav-color: rgb(141, 108, 81);
   overflow: hidden;
 } 
 
@@ -23,30 +23,30 @@ body {
 }
 
 .nav-item {
-  color: white;
-  background-color: var(--main-nav-color);
+  color: black;
+  background-color: transparent;
   text-decoration: none;
   padding: 15px;
   font-size: 1.1em;
-  border-right: solid white 1px;
+  border-right: solid var(--secondary-nav-color) 2px;
   width: 15%;
   text-align: center;
 }
 
 .nav-item:hover {
-  //background-color: rgb(94, 0, 0);
-  opacity: 0.9;
+  background-color: white;
+  opacity: 0.5;
 }
 
 .nav-item-empty {
   color: white;
-  background-color: var(--main-nav-color);
+  background-color: transparent;
   text-decoration: none;
   padding: 15px;
   font-size: 1.1em;
   width: 100%;
   text-align: center;
-  border-right: solid white 1px;
+  border-right: solid var(--secondary-nav-color) 2px;
 }
 
 .form_input {
@@ -113,7 +113,6 @@ select {
 select:focus {
   outline: 2px solid var(--main-nav-color);
   border-radius: 0px;
-  border-color: green;
 }
 
 
@@ -123,6 +122,9 @@ select:focus {
   display: flex; 
   justify-content: center; 
   align-items: center;
+  background-image: url("DarkCastle.jpg");
+  background-color: rgba(255, 115, 0, 0.274);
+  background-blend-mode: lighten;
 }
 
 #inner-page-container{
@@ -130,11 +132,13 @@ select:focus {
   flex-direction: column;
 height: 98%;
 width: 98%;
-border: solid red 1px;
+border: solid var(--secondary-nav-color) 2px;
 }
 
 #nav-bar-container{
   width: 100%;
+  background-image: linear-gradient(to top right, rgba(255, 242, 223, 0.8),rgba(29, 19, 0, 0.8));
+  //opacity: 0.7;
 }
 
 #user-sign-in{
@@ -144,12 +148,15 @@ border: solid red 1px;
 }
 
 #two-column-container {
-  border: solid green 3px;
   display: flex;
   flex-direction: row;
   height: 98%;
   align-items: center;
   justify-content: center;
+  //background-image: url("WarhammerMap.png");
+  background-color: rgba(202, 202, 202, 0.8);
+  background-blend-mode: lighten;
+  background-size: 100%;
 }
 
 #main-column1{
