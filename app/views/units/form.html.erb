@@ -1,0 +1,36 @@
+<h1><%= @unit.name ? "Edit " : "New " %>Unit</h1>
+<div class="form_input"><%= form_with(model: [@race, @unit], local: true) do |f| %><?div>
+<div class="form_input_label"><%= f.label :name %></div>
+<div class="form_input"><%= f.text_field :name %></div>
+
+<div class="form_input_label"><%= f.label :type %></div>
+<div class="form_input"><%= f.select :type, ("Hero", "Core", "Special") %></div>
+
+<div class="form_input_label"><%= f.label :speed %></div>
+<div class="form_input"><%= f.text_field :speed %></div>
+
+<div class="form_input_label"><%= f.label :melee %></div>
+<div class="form_input"><%= f.text_field :melee %></div>
+
+<div class="form_input_label"><%= f.label :range %></div>
+<div class="form_input"><%= f.text_field :range %></div>
+
+<div class="form_input_label"><%= f.label :defense %></div>
+<div class="form_input"><%= f.text_field :defense %></div>
+
+<div class="form_input_label"><%= f.label :attack %></div>
+<div class="form_input"><%= f.text_field :attack %></div>
+
+<div class="form_input_label"><%= f.label :nerve %></div>
+<div class="form_input"><%= f.text_field :nerve %></div>
+
+<div class="form_input_label"><%= f.label :point %></div>
+<div class="form_input"><%= f.text_field :point %></div>
+
+<div class="form_input_label"><%= f.label :attack %></div>
+<div class="form_input"><%= f.text_field :attack %></div>
+
+
+<div class="form_input"><%= f.submit %></div>
+<% end %>
+</hr>
